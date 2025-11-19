@@ -1,4 +1,4 @@
-package main.java.com.example.cloud;
+package java.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +14,7 @@ public class ExampleApiApp {
 */
 
     public static void main(String[] args) {
-        SpringApplication.run(CloudWorkshopApiApplication.class, args);
+        SpringApplication.run(ExampleApiApp.class, args);
     }
 }
 

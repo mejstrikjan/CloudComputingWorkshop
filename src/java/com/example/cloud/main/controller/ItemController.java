@@ -1,10 +1,10 @@
-package main.java.com.example.cloud.controller;
+package com.example.cloud.main.controller;
 
-import com.example.cloud.model.Item;
-import com.example.cloud.service.ItemService;
 import org.springframework.web.bind.annotation.*;
+import java.util.Map;
 
-import java.util.List;
+import com.example.cloud.main.service.ItemService;
+import com.example.cloud.main.model.Item;
 
 @RestController
 @RequestMapping("/items")
@@ -17,23 +17,23 @@ public class ItemController {
     }
 
     @GetMapping
-    public List<Item> list() {
+    public Map<String, String> list() {
         return service.getAll();
     }
 
     @PostMapping
-    public Item create(@RequestBody Item item) {
-        return service.create(item.getName());
+    public String create(@RequestBody Map<String, String> payload) {
+        return service.create(payload.get("name"));
     }
 
     @GetMapping("/{id}")
-    public Item get(@PathVariable String id) {
+    public String get(@PathVariable String id) {
         return service.get(id);
     }
 
     @PutMapping("/{id}")
-    public Item update(@PathVariable String id, @RequestBody Item item) {
-        return service.update(id, item.getName());
+    public void update(@PathVariable String id, @RequestBody Map<String, String> payload) {
+        service.update(id, payload.get("name"));
     }
 
     @DeleteMapping("/{id}")

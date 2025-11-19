@@ -1,4 +1,4 @@
-package main.java.com.example.cloud.model;
+package com.example.cloud.main.model;
 
 public class Item {
     private String id;
