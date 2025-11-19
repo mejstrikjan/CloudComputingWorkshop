@@ -10,7 +10,7 @@ public class RedisConfig {
 
     @Bean
     public LettuceConnectionFactory redisConnectionFactory() {
-        return new LettuceConnectionFactory();  // localhost:6379 default
+        return new LettuceConnectionFactory(); // localhost:6379
     }
 
     @Bean

@@ -1,12 +1,10 @@
 package com.example.cloud.main.service;
 
 import org.springframework.data.redis.core.HashOperations;
-import org.springframework.stereotype.Service;
-import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
-import com.example.cloud.main.model.Item;
 
 @Service
 public class ItemService {
